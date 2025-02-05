@@ -10,7 +10,7 @@ from cinema.views import (MovieViewSet,
 app_name = "cinema"
 
 router = routers.DefaultRouter()
-router.register("movies", MovieViewSet)
+router.register("movies", MovieViewSet, basename="movie-list")
 
 cinemahall_list = CinemaHallViewSet.as_view(actions={
     "get": "list",
